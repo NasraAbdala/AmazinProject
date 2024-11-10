@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+</head>
+<body>
+
+<button id="addCartBtn">Add to Cart</button>
+<p>Items in Cart: <span id="cartCount">0</span></p>
+
+<script>
+    let addCart = 0;
+
+   document.getElementById('addCartBtn').addEventListener('click', function() {
+        console.log(addCart++);//addCart++;
+        document.getElementById('cartCount').innerText = addCart;
+    });
+</script>
+
+</body>
+</html>

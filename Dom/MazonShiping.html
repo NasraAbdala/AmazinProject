@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+
+  <p>Amazon Shipping Cart</p>
+  <p>Order under 40 =+10</p>
+  <p>Order over over 40 is Free</p>
+  <input id="display"  type="number">
+  <button id="cal">Calculate</button>
+  <p><span id="prin"></span></p>
+  
+
+  <script>
+ 
+   document.getElementById('cal').addEventListener('click',function(){
+     let calculate=parseFloat(document.getElementById('display').value);
+   ;
+     if(calculate<40){
+       calculate+=10;
+      
+     }
+       
+      document.getElementById('prin').innerText =
+   `$${calculate} .`
+     
+   });
+  
+ 
+  
+   
+   
+  </script>
+</body>
+
+</html>

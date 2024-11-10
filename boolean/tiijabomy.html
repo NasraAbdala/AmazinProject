@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+<button onclick="
+let computermove='';
+let rondom=Math.random();
+
+
+if(rondom>0 && rondom<1/3){
+computermove='rock';
+}
+else if(rondom>1/3&& rondom<2/3){
+computermove='paper';
+}
+else if(rondom>2/3&& rondom<1){
+computermove='secorie';
+}
+
+
+let usermove='rock';
+
+let result='';
+if(usermove===computermove)
+{
+result='you tie'
+}
+else if(usermove==='rock'&& computermove=='paper'|| usermove==='secorie'&& computermove=='paper'|| usermove=='rock' && computermove==='secorie'){
+  result='you win'
+}
+
+else{
+ result='lose'
+}
+
+alert(` You picked: ${usermove} . computer picked : ${computermove} . ${result}`);
+
+">
+  
+Rock</button>
+</body>
+
+</html>

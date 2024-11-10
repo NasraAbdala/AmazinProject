@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+<script>
+  let product={
+    name:'socks',
+    price:190,
+    ['delivery-time']:'T-shirt',
+    
+    fun: function function1(){
+      console.log('function is inside')
+    }
+    
+  };
+  product.name='cotton socks';
+  console.log(product['delivery-time']);
+product.fun();
+
+console.log(JSON.stringify(product));
+const jsonString=JSON.stringify(product);
+console.log(JSON.parse(jsonString));
+
+console.log(JSON.parse(JSON.stringify(product)));
+
+const objects={
+  messge:'Good job',
+  
+  methode: function fun9(){
+    console.log('hi')
+  }
+  
+}
+const {messge}=objects;
+console.log(messge)
+objects.methode();
+</script>
+
+</body>
+
+</html>

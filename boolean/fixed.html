@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+<button onclick="showcart()"
+>showQuantity</button>
+<button onclick="UpdateCart(1)">addcart</button>
+<button onclick="UpdateCart(2)">add+2</button>
+<button onclick="UpdateCart(4)">add+4</button>
+<button onclick="UpdateCart(5)">add+5</button>
+<button onclick="UpdateCartde(1)">RemoveCart</button>
+<button onclick="UpdateCartde(2)">-2</button>
+<button onclick="UpdateCartde(3)">-3</button>
+<button onclick="resr()">Rsetcrt</button>
+
+</body>
+<script>
+let cart = 0;
+function UpdateCart(increment) {
+  if (cart + increment > 10) {
+    alert('The cart is full');
+    return;
+  } else {
+    cart += increment;
+    console.log(`Cart quantity: ${cart}`);
+  }
+}
+function UpdateCartde(decrement) {
+  if (cart - decrement < 0) {
+    alert('The cart is full');
+    return;
+  } else {
+    cart -= decrement;
+    console.log(`Cart quantity: ${cart}`);
+  }
+}
+
+
+function resr() {
+  cart = 0;
+  console.log('reset');
+}
+
+function showcart() {
+  console.log(`Cart quantity: ${cart}`);
+}
+
+
+
+
+</script>
+  
+</script>
+</html>

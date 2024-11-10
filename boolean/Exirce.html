@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+<button onclick="
+ 
+ let haour='21';
+ let name='Nasra';
+ 
+ if(haour>6 && haour<=12){
+alert(` good morning ${name}`);
+ }
+ else if(haour>=13 && haour<=17){
+ 
+alert(` good afternoon ${name}`);
+ 
+ }
+ else{
+
+ 
+ alert(` good evening ${name}`);
+ }
+">
+  
+hours</button>
+<button onclick="
+let age=20;
+if(age<=6  || age>=65){
+alert('They got discoun ');
+}
+else{
+alert('No discount ');
+}
+
+
+">
+  age
+</button>
+<button onclick="
+let isholiday=true;
+let age=10;
+if(isholiday){
+
+if(age<=6 && age>=65){
+  alert('They got discoun ');
+  }
+  else{
+  alert('No discount ');
+  }
+
+
+
+}else{
+if(age<=6 && age>=65){
+  alert('They got discoun ');
+  }
+  else{
+  alert('No discount ');
+  }
+
+
+}
+
+
+">
+  
+is holidy</button>
+<button onclick="
+
+let random=Math.random();
+console.log(random);
+
+">
+  
+  Random
+</button>
+
+<button onclick="
+
+let number=Math.random();
+let head='';
+let tail='';
+if(number<=0.5){
+console.log('head');
+
+}
+else{
+console.log('tail');
+}
+
+
+
+">
+  
+  head&tail
+  
+</button>
+<button onclick="
+let number=Math.random();
+
+let htmove='';
+
+if(number<=0.5){
+
+htmove='head';
+}
+else{
+htmove='tail';
+
+}
+
+let results='';
+results=htmove;
+
+let gues='head'
+if(results===gues){
+ 
+alert(` The results is : ${results}. you win`);
+}else{
+alert(` The results is : ${results}. you lose`);
+
+}
+
+
+">
+  
+  gues
+  
+</button>
+<button id="addcart">add cart</button>
+<button id="add-2">-2</button>
+<p>collect items<span id="cartcount"></span></p>
+
+
+
+
+
+
+</body>
+<script>
+  let addcart=0;
+  let remove=0;
+  document.getElementById('addcart').addEventListener('click',function(){
+    if(addcart<=10){
+    addcart+=1;
+    document.getElementById('cartcount').innerText=addcart;
+    }else{
+      alert('cartwuantity is full')
+    }
+  });
+   document.getElementById('add-2').addEventListener('click', function() {
+    if (addcart <=0) {
+      
+      alert('cartwuantity is full')
+     
+    }
+    else {
+      addcart -= 2;
+      document.getElementById('cartcount').innerText = addcart;
+    }
+  });
+function great(name){
+  
+  console.log(` Heloo : ${name}.`);
+}
+great('Nasra');
+function greati(namee) {
+
+  console.log(` Heloo : ${namee}.`);
+  if(namee='undifined'){
+  console.log('hi ther');
+}
+}
+greati();
+
+function cvtfer(celcius)
+{
+  return((celcius*9/5)+32);
+  
+}
+console.log(cvtfer(25));
+
+
+
+function cvtcel(fer)
+{
+  return ((fer -32) *5/9);
+
+}
+console.log(cvtcel(86));
+
+
+function cvtcer(degree, unit)
+{
+  if (unit === 'C') {
+    return ((degree * 9 / 5) + 32);
+  } else if (unit === 'F') {
+    return ((degree - 32) * 5 / 9);
+  } else {
+    return ('unknown unit');
+  }
+
+
+}
+console.log(cvtcer(25, 'C'));
+console.log(cvtcer(86, 'F'));
+
+function converLength(Length,from,to){
+  
+  if(from==='Km' && to=== 'miles'){
+    console.log(Length / 1.6);
+  }else if(from==='miles' && to==='Km'){
+    console.log(Length*1.6);
+  }else if(from===to){
+    
+    console.log(Length);
+  }
+  else{
+    
+    console.log('no unit');
+  }
+  
+
+}
+converLength(50,'miles','Km');
+converLength(32,'Km','miles');
+converLength(50,'Km','Km');
+converLength(5,'lbs','lbs');
+
+
+
+
+function converLengthfeet(Length, from, to) {
+  if (from === 'Km' && to === 'miles') {
+    console.log(Length / 1.6);
+  } else if (from === 'miles' && to === 'Km') {
+    console.log(Length * 1.6);
+  } else if(from==='miles' && to==='ft'){
+    console.log(Length * 5281)
+    
+  } else if(from ==='Km' && to ==='ft'){
+    console.log(Length * 3281)
+  } else if (from === to) {
+    console.log(Length)
+  }
+  else {
+    console.log('no unit');
+  }
+}
+converLengthfeet(5, 'miles', 'Km');
+converLengthfeet(5, 'miles', 'ft');
+converLengthfeet(5, 'Km', 'ft');
+
+</script>
+</html>

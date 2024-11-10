@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+<button id="ShowcartQuantity">ShowcartQuantity</button>
+<button id="AddCart">AddCart</button>
+<button id="Add2">+2</button>
+<button id="Add3">+3</button>
+<button id="rsest">Rseset</button>
+<p>cart <span id="cartcount"></span></p>
+<script>
+  let ShowcartQuantity=0;
+  let AddCart=0;
+  let rsest=0;
+  document.getElementById('AddCart').addEventListener('click',function(){
+    AddCart++;
+    document.getElementById('cartcount').innerText=AddCart;
+   // AddCart+2;
+   
+  });
+    document.getElementById('Add2').addEventListener('click', function() {
+        AddCart+=2;
+        document.getElementById('cartcount').innerText = AddCart;
+    });
+     document.getElementById('Add3').addEventListener('click', function() {
+   AddCart += 3;
+   document.getElementById('cartcount').innerText = AddCart;
+ });
+      document.getElementById('ShowcartQuantity').addEventListener('click', function() {
+       AddCart =AddCart;
+       document.getElementById('cartcount').innerText = AddCart;
+     });
+     document.getElementById('rsest').addEventListener('click', function() {
+  AddCart = rsest;
+  document.getElementById('cartcount').innerText = rsest;
+});
+</script>
+</body>
+
+</html>

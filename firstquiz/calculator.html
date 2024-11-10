@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+<div id="calculator">
+  <input id="display" readonly>
+  <div id="keys">
+    <button onclick="appendedToDisplay('+')">+</button>
+    <button onclick="appendedToDisplay('1')">1</button>
+    <button onclick="appendedToDisplay('2')">2</button>
+    <button onclick="appendedToDisplay('3')">3</button>
+    <button onclick="appendedToDisplay('4')">4</button>
+    <button onclick="appendedToDisplay('5')">5</button>
+    <button onclick="appendedToDisplay('6')">6</button></button>
+    <button onclick="appendedToDisplay('7')">7</button>
+    <button onclick="appendedToDisplay('8')">8</button>
+    <button onclick="appendedToDisplay('9')">9</button>
+    <button onclick="appendedToDisplay('.')">.</button>
+    <button onclick="appendedToDisplay('-')">-</button>
+    <button onclick="appendedToDisplay('*')">*</button>
+    <button onclick="appendedToDisplay('/')">/</button>
+    <button onclick="calcu()">=</button>
+    <button onclick="Clear()">C</button>
+  </div>
+  
+  
+  
+  
+  
+</div>
+<script>
+let displa=document.getElementById('display');
+displa.value=localStorage.getItem('displa',displa)||'';
+function appendedToDisplay(input){
+  displa.value+=input;
+  localStorage.setItem('displa',displa.value);
+}
+function calcu(){
+  try{
+    
+  
+  displa.value=eval(displa.value);
+  localStorage.setItem('displa',displa.value);
+  }catch{
+    displa.value='Eroor'
+  }
+}
+  function Clear(){
+    displa.value='';
+    localStorage.removeItem('displa',displa.value)
+  }
+</script>
+</body>
+
+</html>

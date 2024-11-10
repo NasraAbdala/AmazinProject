@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Basic styling for table and button */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    hr {
+      border: 0;
+      border-top: 1px solid #ddd;
+      margin: 0;
+    }
+    button {
+      background: none;
+      border: none;
+      color: blue;
+      cursor: pointer;
+    }
+    .alert {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 15px 20px;
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1; /* Start fully visible */
+  z-index: 1000; /* Ensure it appears above other content */
+  font-size: 16px; /* Font size for alert text */
+}
+
+  </style>
+</head>
+
+<body>
+  <input id="Todolist" placeholder="Add a new to-do">
+  <button id="Add">Add</button>
+  <div id="customAlert" class="alert" style="display: none;"></div>
+  <p>
+    <table>
+      <thead>
+        <tr>
+          <th>List</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="diplayTodo"></tbody>
+    </table>
+  </p>
+
+  <script src="/js/todolist.js"></script>
+</body>
+
+</html>

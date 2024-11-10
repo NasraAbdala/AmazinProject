@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+  <button id="start">Start</button>
+     <button class="js-button" onclick="
+      updateButton();
+    ">Start</button>
+
+   <button id="clicke">click</button>
+   <button id="addCart">add Cart</button>
+   <p><span id="Added"></span></p>
+<script>
+
+let add=function(){
+    console.log(2+3);
+  }
+  add();
+ function runtwice(fun){
+   console.log('12b')
+ }runtwice()
+ runtwice(add);
+
+document.getElementById('start').addEventListener('click',function(){
+  let buttonElemen=document.getElementById('start');
+ setTimeout(function(){
+    if(buttonElemen.innerHTML==='Start'){
+      buttonElemen.innerHTML='Finshed'
+      
+    }
+    else{
+      buttonElemen.innerHTML='Start';
+    }
+  },1000)
+});
+ document.getElementById('clicke').addEventListener('click',function(){
+   let clicbutton=document.getElementById('clicke');
+   setInterval(function(){
+     if(clicbutton.innerHTML==='click'){
+       clicbutton.innerHTML='Loading'
+     }else{
+       clearInterval(clicbutton);
+       clicbutton.innerHTML='finished'
+       
+     }
+     
+   },1000)
+   
+ });
+ 
+   function updateButton() {
+    const button = document.querySelector('.js-button');
+
+    setTimeout(function() {
+      button.innerHTML = 'Finished!';
+    }, 1000);
+  }
+document.getElementById('addCart').addEventListener('click',function(){
+  let addCart=document.getElementById('Added');
+  setInterval(function(){
+    addCart.innerHTML='Added';
+    clearInterval(addCart)
+  
+  },2000)
+  
+  
+  addCart.innerHTML=''
+  
+})
+let mult=(value,value1)=>{return (value+value1)};
+console.log(mult(4,5));
+
+
+function countPostive(nums){
+let Postive=[];
+nums.forEach(function (nums){
+  
+  if(nums>0){
+     Postive.push(nums) ;
+  }
+
+})
+return Postive;
+}console.log(countPostive(([1,2,-3,5])))
+</script>
+</body>
+
+</html>

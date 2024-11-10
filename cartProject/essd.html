@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+  <button id="ShowcartQuantity">ShowcartQuantity</button>
+<button id="AddCart">AddCart</button>
+<button id="Add2">+2</button>
+<button id="add3">+3</button>
+<button id="rsest">Rseset</button>
+<p>cart <span id="cartcaunt"></span></p>
+<script>
+  let cartcaunt=0;
+  function updatecart(){
+    document.getElementById('cartcaunt').innerText=cartcaunt;
+    
+  }
+  document.getElementById('AddCart').addEventListener('click',()=>{
+  cartcaunt++; updatecart();
+    
+  });
+  document.getElementById('Add2').addEventListener('click',function(){
+    cartcaunt+=2;updatecart();
+    
+  });
+  document.getElementById('add3').addEventListener('click',function(){
+    cartcaunt+=3; updatecart();
+    
+  });
+  document.getElementById('rsest').addEventListener('click',function(){
+    cartcaunt=0;updatecart();
+  });
+  document.getElementById('ShowcartQuantity').addEventListener('click',function()
+  {
+    cartcaunt=cartcaunt;updatecart();
+  });
+</script>
+  
+
+</body>
+
+</html>

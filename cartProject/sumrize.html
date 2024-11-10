@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cart</title>
+</head>
+<body>
+  <button id="AddCart">Add 1</button>
+  <button id="Add2">+2</button>
+  <button id="Add3">+3</button>
+  <button id="reset">Reset</button>
+  <p>Cart: <span id="cartcount">0</span></p>
+
+  <script>
+    let cartCount = 0;
+    function updateCart() {
+      document.getElementById('cartcount').innerText = cartCount;
+    }
+    document.getElementById('AddCart').addEventListener('click', () => { cartCount++; updateCart(); });
+    document.getElementById('Add2').addEventListener('click', () => { cartCount += 2; updateCart(); });
+    document.getElementById('Add3').addEventListener('click', () => { cartCount += 3; updateCart(); });
+    document.getElementById('reset').addEventListener('click', () => { cartCount = 0; updateCart(); });
+  </script>
+</body>
+</html>

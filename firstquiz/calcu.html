@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+<div id="calculator">
+  <div id="keys">
+    <input id="display" readonly>
+    <button onclick="AppendedDislay('+')" >+</button>
+    <button onclick="AppendedDislay('1')" >1</button>
+    <button onclick="AppendedDislay('2')">2</button>
+    <button onclick="AppendedDislay('3')">3</button>
+<button onclick="AppendedDislay('4')">4</button>
+<button onclick="AppendedDislay('5')">5</button>
+<button onclick="AppendedDislay('6')">6</button>
+<button onclick="AppendedDislay('7')">7</button>
+<button onclick="AppendedDislay('8')">8</button>
+<button onclick="AppendedDislay('9')">9</button>
+<button onclick="AppendedDislay('0')">0</button>
+<button onclick="AppendedDislay('.')">.</button>
+<button onclick="calculate()">=</button>
+<button onclick="clearDisplay()">C</button>
+<button onclick="AppendedDislay('-')">-</button>
+  <button onclick="AppendedDislay('*')">*</button>
+<button onclick="AppendedDislay('/')">/</button>
+  </div>
+  
+</div>
+<script>
+let displayElement = document.getElementById('display');
+displayElement.value = localStorage.getItem('display') || '';
+
+function AppendedDislay(input) {
+  displayElement.value += input;
+  localStorage.setItem('display', displayElement.value);
+}
+
+function calculate() {
+  try {
+    displayElement.value = eval(displayElement.value);
+    localStorage.setItem('display', displayElement.value);
+  } catch {
+    displayElement.value = 'Syntax Error';
+  }
+}
+
+function clearDisplay() {
+  displayElement.value = '';
+  localStorage.removeItem('display');
+}
+
+ 
+
+</script>
+
+
+</body>
+
+</html>

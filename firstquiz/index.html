@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+ <ol>
+    <li><button>click</button></li>
+    <li><button>Nasra abdalla</button></li>
+    <li><button>Pasta</button></li>
+    <li><p>Hello world i want to discover my life with belving Allah and second my self=</p></li>
+    <li><button style="color: yellow">Add cart</button></li>
+    <li><button style="color: orange">buy now</button></li>
+    <li><p>Adults plain cotton T-shirt <br/> Price $7.90 </p><button style="color: yellow" onclick="
+    alert ('Adeed ');
+    ">Add cart</button>
+    <button style="color: orange" onclick="alert ('purchased');">buy now</button>
+    </li>
+    <li>
+       <button id="add+4">add+4</button>
+ <button id="add+5">add+5</button>
+ <button id="add-1">Remove</button>
+ <button id="add-2">add-2</button>
+ <button id="add-3">add-3</button>
+ <p>collectItems  <span id="cartcount"></span></p>
+    </li>
+    <li>
+  <button id="1">1</button>
+  <button id="2">2</button>
+  <button id="3">3</button>
+  <button id="4">4</button>
+  <button id="5">5</button><br>
+  <button id="6">6</button>
+  <button id="7">7</button>
+  <button id="8">8</button>
+  <button id="9">9</button>
+  <button id="0">0</button><br>
+  <button id="+">+</button>
+  <button id="=">=</button>
+  <button id="clear">clear</button>
+  
+  <p>collectItems <span id="add"></span></p>
+</li>
+    
+    
+
+  </ol>
+<script>
+//alert ('heloo ');
+console.log('welcom  ');
+  console.log('loading... ');
+  let name="Nasra";
+ // consol.log('My name is '${name});
+console.log(`My name is: ${name}`);
+let cost=5+3+9;
+
+console.log(`cost of food is: ${cost}`);
+let tex= cost/10;
+console.log(`tex charges 10%: ${tex}`);
+let result= tex*0.1;
+console.log(result)
+let totalCost=cost+tex;
+console.log(`total tex : ${totalCost}`)
+
+ let addcart=0;
+ let remove=0;
+ function UpdateCart(){
+   document.getElementById('cartcount').innerText=addcart;
+  
+ }
+  function UpdateCat() {
+   document.getElementById('cartcount').innerText = remove;
+
+ }
+ document.getElementById('add+4').addEventListener('click',function(){
+   addcart+=4;UpdateCart();
+  
+   
+ });
+document.getElementById('add+5').addEventListener('click',function(){
+  addcart+=5;UpdateCart();
+  
+});
+document.getElementById('add-2').addEventListener('click',function(){
+  if(addcart<=0){
+    alert('Not engou cart')
+ 
+  }else{
+    addcart-=2;UpdateCart();
+    
+  
+  }
+});
+document.getElementById('add-3').addEventListener('click',function(){
+  if(addcart>0){
+  addcart-=3;UpdateCart();
+  }
+});
+document.getElementById('add-1').addEventListener('click',function(){
+   if (addcart > 0) {
+  addcart -= 1;UpdateCart();
+}
+  
+});
+let clear='';
+     document.getElementById('1').addEventListener('click', function() {
+       clear += 1;
+       document.getElementById('add').innerText = clear;
+     });
+
+
+</script>
+</body>
+
+</html>

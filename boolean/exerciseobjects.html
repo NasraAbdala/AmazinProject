@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+  
+<button onclick="
+
+gues();
+
+">
+  
+  head
+  
+<button onclick="
+;
+
+">
+
+  tail
+  
+<script>
+function gues(gues){
+  let number=Math.random();
+
+let htmove='';
+
+if(number<=0.5){
+
+htmove='head';
+}
+else{
+htmove='tail';
+
+}
+
+let results='';
+results=htmove;
+
+ 
+if(results===gues=='head'){
+ 
+alert(` The results is : ${results}. you win`);
+}else{
+alert(` The results is : ${results}. you lose`);
+
+}
+
+  
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  let product={
+    name:'basketball',
+    price:2095,
+    'deliver-time':'3days'
+  };
+  product.price +=500
+  console.log(product['deliver-time'])
+//  console.log( product['deliver-time'])
+//  console.log(product.price)
+const   {name,price,'deliver-time':deliverTime}=product;
+console.log(name,    price,deliverTime);
+
+let produc1={
+  name:'ball',
+  price:200
+};
+produc2=produc1;
+console.log(produc2.price);
+
+
+function prod1(){
+  let name='beskuit';
+  let price1=300;
+//  console.log(`${price1}.`);
+return price1;
+}
+prod1();
+ function prod2(price2){
+     name1 = 'beskuit';
+     console.log(`${price2}.`);
+     price1=prod1();
+     if(price1>price2){
+       console.log('the price 1 is begger');
+     }else if(price1<price2){
+       console.log('the price 2 is bigger')
+     }
+ }
+ prod2(400);
+ 
+ 
+ 
+  let produ1={
+   nam1:'coton',
+   pric1:200
+ };
+    let produ2={
+    nam1: 'cotton',
+    pric2: 300
+  };
+  function compare(produ1,produ2){
+  if(produ1.pric1< produ2.pric2)
+  {
+    return produ1;
+  }else{
+    return produ2;
+  }
+ }
+console.log(compare(produ1,produ2));
+
+
+
+
+
+
+
+
+
+
+let sal1 = {
+  nam1: 'coton',
+  pric1: 200
+};
+let sla2 = {
+  nam1: 'cotton',
+  pric2: 300
+};
+
+function compartrue(sal1, sla2) {
+  if (sal1.pric1 < sla2.pric2)
+  {
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log(compartrue(sal1, sla2));
+
+
+
+// Define the objects outside the function
+
+ console.log('Good morrnig'.toLowerCase());
+ 
+console.log('test'.repeat(2));
+
+
+</script>
+</body>
+
+</html>

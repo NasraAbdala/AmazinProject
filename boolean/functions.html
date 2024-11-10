@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+  <button id="Rock">Rock</button>
+  <button id="Paper">Paper</button>
+  <button onclick="Scissor('Scissors');">Secorries</button>
+  <button onclick="
+  reset();
+
+  ">Reset Socres</button>
+
+</body>
+<script>
+const score={
+  win:0,
+  loses:0,
+  ties:0
+  
+};
+const reset=()=>{
+    score.win = 0,
+     score.loses = 0,
+     score.ties = 0
+};
+
+let computerMove='';
+let RandomNumber = Math.random();
+function computerMoves(){
+  document.getElementById('Rock').addEventListener('click',function(){
+    if (RandomNumber >= 0 && RandomNumber < 1 / 3) {
+  computerMove = 'Rock';
+} else if (RandomNumber >= 1 / 3 && RandomNumber < 2 / 3) {
+  computerMove = ' Paper';
+} else if (RandomNumber >= 2 / 3 && RandomNumber < 1) {
+  computerMove = 'Scissors'; // Corrected the typo here
+}
+
+
+
+let results = '';
+if (computerMove === 'Rock') {
+  results = 'Tie';
+
+
+} else if (computerMove === ' Paper') {
+  results = 'You lose'
+}
+else if (computerMove === 'Scissors') {
+  results = 'You win'
+}
+
+  if (results === 'You win') {
+    score.win += 1;
+  } else if (results === 'You lose') {
+    score.loses += 1;
+  } else if (results === 'Tie') {
+    score.ties += 1;
+  }
+
+  alert(` You picked Rock. computer picked : ${computerMove} . ${results}. Wins:${score.win}. looses:${score.loses}.Ties.${score.ties}`);
+  
+
+
+    
+  });
+}
+computerMoves();
+document.getElementById('Paper').addEventListener('click',function(){
+  Paper();
+});
+ function Paper(){
+   if (RandomNumber >= 0 && RandomNumber < 1 / 3) {
+  computerMove = 'Rock';
+} else if (RandomNumber >= 1 / 3 && RandomNumber < 2 / 3) {
+  computerMove = ' Paper';
+} else if (RandomNumber >= 2 / 3 && RandomNumber < 1) {
+  computerMove = 'Scissors'; // Corrected the typo here
+}
+
+let results = '';
+if (computerMove === 'Rock') {
+  results = 'You win';
+
+
+} else if (computerMove === ' Paper') {
+  results = 'Tie'
+}
+else if (computerMove === 'Scissors') {
+  results = 'You loss'
+}
+  if (results === 'You win') {
+    score.win += 1;
+  } else if (results === 'You loss') {
+    score.loses += 1;
+  } else if (results === 'Tie') {
+    score.ties += 1;
+  }
+
+alert(` You picked Paper. computer picked : ${computerMove} . ${results}. Wins:${score.win}. looses:${score.loses}.Ties.${score.ties}`);
+   
+ }
+ function Scissor(personalMove){
+   
+   if (RandomNumber >= 0 && RandomNumber < 1/3) {
+  computerMove = 'Rock';
+} else if (RandomNumber >= 1/3 && RandomNumber < 2/3) {
+  computerMove = 'Paper';
+} else if (RandomNumber >= 2/3 && RandomNumber < 1) {
+  computerMove = 'Scissors'; // Corrected the typo here
+}
+
+
+
+  let results='';
+  if(personalMove==='Scissors'){
+    if(computerMove==='Rock'){
+     results='you lose'
+    }else if( computerMove==='Paper'){
+       results='You win'
+      }
+      else if( computerMove==='Scissors'){
+        results='you tie'
+      }
+  }
+  if(results==='You win'){
+    score.win+=1; 
+  }else if(results==='you lose'){
+    score.loses+=1;
+  }else if(results==='you tie'){
+    score.ties+=1;
+  }
+  alert(` You picked: ${personalMove}. computer picked : ${computerMove} . ${results}. Wins:${score.win}. looses:${score.loses}.Ties.${score.ties}`);
+
+ }
+</script>
+</html>

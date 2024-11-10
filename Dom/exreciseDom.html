@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+<button>9a</button>
+<button class="b">9b</button>
+<button id='head'>head</button>
+<button id='tail'>tail</button>
+<p id="result"><span></span></p>
+<input id="display">
+<button id="submit">Enter</button>
+<p>your name is:<span id="resp"></span></p>
+<script>
+  
+  console.log(document.querySelector('button'));
+  document.querySelector('.b').innerHTML='change';
+  if(document.getElementById('head').addEventListener('click',function(){
+    document.getElementById('result').innerText=
+    ` you choose is:${document.querySelector('#head').innerHTML} .`
+  }));
+  else if(document.getElementById('tail').addEventListener('click', function() {
+  document.getElementById('result').innerText = ` you choose is:${document.querySelector('#tail').innerHTML} .`
+}));
+  document.getElementById('submit').addEventListener('click',function(){
+    let display=document.getElementById('display').value;
+    document.getElementById('resp').innerHTML=display;
+    
+  });
+</script>
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+  <button onclick="
+
+playgame('head');
+
+">
+
+  head
+
+</button>
+<button onclick="
+playgame('tail');
+">
+  tail
+</button>
+<button onclick="reset()">
+  reset
+</button>
+<script>
+let reset=()=>{
+  score.win=0,
+  score.lose=0,
+  localStorage.removeItem('score')
+}
+let score= JSON.parse(localStorage.getItem('score'));
+if(score===null){
+ score={
+  win:0,
+  lose:0
+ }
+};
+
+function playgame(gues){
+  let number = Math.random();
+
+let htmove = '';
+
+if (number <= 0.5) {
+
+  htmove = 'head';
+}
+else {
+  htmove = 'tail';
+
+}
+
+let results = '';
+
+
+if (gues=== htmove) 
+  {
+
+  results='you win'
+  
+} else  {
+  
+  results='you lose';
+}
+
+
+
+
+if(results==='you win'){
+  score.win+=1;
+}else if(results==='you lose'){
+  score.lose+=1;
+}
+
+localStorage.setItem('score',JSON.stringify(score));
+alert(` You picked: ${gues}. computer picked : ${htmove} . ${results}.Win:${score.win}. lose:${score.lose}`);
+}
+</script>
+</body>
+
+</html>
